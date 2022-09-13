@@ -1,5 +1,9 @@
+import MainPage from '../../pages/main-page/main-page';
+import { offers } from '../../mock/mock';
+
 function App(): JSX.Element {
-  return <p>Hello, world!</p>;
+  return (<MainPage offers={offers}/>);
+
 }
 
 export default App;
