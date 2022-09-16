@@ -1,5 +1,4 @@
 import MainPage from '../../pages/main-page/main-page';
-import { offers } from '../../mock/mock';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import FavoritesPage from '../../pages/favorites-page/favorites-page';
 import NotFoundPage from '../../pages/not-found-page/not-found-page';
@@ -7,8 +6,13 @@ import OfferPage from '../../pages/offer-page/offer-page';
 import LoginPage from '../../pages/login-page/login-page';
 import { AppRoute, AuthStatus } from '../../const';
 import PrivateRoute from '../privat-route/private-route';
+import { OffersType } from '../../types/offer';
 
-function App(): JSX.Element {
+type AppProps = {
+  offers: OffersType
+}
+
+function App({offers}: AppProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>

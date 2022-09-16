@@ -22,16 +22,16 @@ export const offers: OffersType = [
     },
     images: ['img/1.png'],
     isFavorite: true,
-    isPremium: false,
+    isPremium: true,
     location: {
       latitude: 52.35514938496378,
       longitude: 4.673877537499948,
       zoom: 8
     },
     maxAdults: 4,
-    previewImage: 'img/1.png',
-    price: 120,
-    rating: 4.8,
+    previewImage: 'img/apartment-01.jpg',
+    price: 422,
+    rating: 3.8,
     title: 'Beautiful & luxurious studio at great location',
     type: 'apartment'
   },
@@ -59,7 +59,7 @@ export const offers: OffersType = [
     images: [
       'img/1.png'
     ],
-    isFavorite: true,
+    isFavorite: false,
     isPremium: false,
     location: {
       latitude: 52.35514938496378,
@@ -67,8 +67,8 @@ export const offers: OffersType = [
       zoom: 8
     },
     maxAdults: 4,
-    previewImage: 'img/1.png',
-    price: 120,
+    previewImage: 'img/apartment-02.jpg',
+    price: 320,
     rating: 4.8,
     title: 'Beautiful & luxurious studio at great location',
     type: 'apartment'
@@ -105,9 +105,9 @@ export const offers: OffersType = [
       zoom: 8
     },
     maxAdults: 4,
-    previewImage: 'img/1.png',
+    previewImage: 'img/apartment-03.jpg',
     price: 120,
-    rating: 4.8,
+    rating: 2.8,
     title: 'Beautiful & luxurious studio at great location',
     type: 'apartment'
   },
@@ -135,16 +135,16 @@ export const offers: OffersType = [
     images: [
       'img/1.png'
     ],
-    isFavorite: true,
-    isPremium: false,
+    isFavorite: false,
+    isPremium: true,
     location: {
       latitude: 52.35514938496378,
       longitude: 4.673877537499948,
       zoom: 8
     },
     maxAdults: 4,
-    previewImage: 'img/1.png',
-    price: 120,
+    previewImage: 'img/apartment-01.jpg',
+    price: 220,
     rating: 4.8,
     title: 'Beautiful & luxurious studio at great location',
     type: 'apartment'
