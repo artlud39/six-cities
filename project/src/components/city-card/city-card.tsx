@@ -1,14 +1,19 @@
+import { Link } from 'react-router-dom';
 import { OfferType } from '../../types/offer';
+import { getOfferUrl } from '../../utils/route';
+import { getAdaptiveRating } from '../../utils/utils';
 
 type CityCardProps = {
   offer: OfferType,
+  isFavoritePage?: boolean,
 }
 
-function CityCard({ offer }: CityCardProps): JSX.Element {
-  const { type, price, title, previewImage, isPremium, isFavorite } = offer;
+function CityCard({ offer, isFavoritePage = false }: CityCardProps): JSX.Element {
+  const { id, type, price, title, previewImage, isPremium, isFavorite, rating } = offer;
 
+  const percentageRating = getAdaptiveRating(rating);
   return (
-    <article className="cities__card place-card">
+    <article className={`${isFavoritePage ? 'favorites__card' : 'cities__card'} place-card`}>
       {
         isPremium ?
           <div className="place-card__mark">
@@ -17,12 +22,12 @@ function CityCard({ offer }: CityCardProps): JSX.Element {
           : null
       }
 
-      <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href="#todo">
-          <img className="place-card__image" src={previewImage} width="260" height="200" alt="Place" />
-        </a>
+      <div className={`${isFavoritePage ? 'favorites__card' : 'cities__image-wrapper'} place-card__image-wrapper`}>
+        <Link to={getOfferUrl(id)}>
+          <img className="place-card__image" src={previewImage} width={`${isFavoritePage ? '150' : '260'}`} height={`${isFavoritePage ? '110' : '200'}`} alt="Place" />
+        </Link>
       </div>
-      <div className="place-card__info">
+      <div className={`${isFavoritePage ? 'favorites__card-info' : ''} place-card__info`}>
         <div className="place-card__price-wrapper">
           <div className="place-card__price">
             <b className="place-card__price-value">&euro;{price}</b>
@@ -37,12 +42,12 @@ function CityCard({ offer }: CityCardProps): JSX.Element {
         </div>
         <div className="place-card__rating rating">
           <div className="place-card__stars rating__stars">
-            <span style={{width: '60%'}}></span>
+            <span style={{width: percentageRating}}></span>
             <span className="visually-hidden">Rating</span>
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#todo">{title}</a>
+          <Link to={getOfferUrl(id)}>{title}</Link>
         </h2>
         <p className="place-card__type">{type}</p>
       </div>

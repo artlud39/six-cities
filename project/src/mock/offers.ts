@@ -31,7 +31,7 @@ export const offers: OffersType = [
     maxAdults: 4,
     previewImage: 'img/apartment-01.jpg',
     price: 422,
-    rating: 3.8,
+    rating: 1.8,
     title: 'Beautiful & luxurious studio at great location',
     type: 'apartment'
   },
@@ -69,7 +69,7 @@ export const offers: OffersType = [
     maxAdults: 4,
     previewImage: 'img/apartment-02.jpg',
     price: 320,
-    rating: 4.8,
+    rating: 3.8,
     title: 'Beautiful & luxurious studio at great location',
     type: 'apartment'
   },
@@ -107,7 +107,7 @@ export const offers: OffersType = [
     maxAdults: 4,
     previewImage: 'img/apartment-03.jpg',
     price: 120,
-    rating: 2.8,
+    rating: 0.8,
     title: 'Beautiful & luxurious studio at great location',
     type: 'apartment'
   },
