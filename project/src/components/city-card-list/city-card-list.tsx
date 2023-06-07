@@ -6,7 +6,7 @@ type CityCardListProps = {
   isFavoritePage?: boolean
 }
 
-function CityCardList({ offers, isFavoritePage = false }: CityCardListProps): JSX.Element {
+function CityCardList({ offers, isFavoritePage = false }: CityCardListProps) {
   return (
     <div className={`${isFavoritePage ? 'favorites__places' : 'cities__places-list places__list tabs__content'}`}>
       {offers.map((offer) => (

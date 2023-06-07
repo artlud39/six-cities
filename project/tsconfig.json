@@ -18,9 +18,61 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "paths": {
+      "@app/*": [
+        "app/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@navigation/*": [
+        "navigation/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@store/*": [
+        "store/*"
+      ],
+      "@constants/*": [
+        "constants/*"
+      ],
+      "@shared/*": [
+        "shared/*"
+      ],
+      "@types/*": [
+        "types/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ]
+    }
   },
   "include": [
-    "src"
+    "./src"
   ]
 }
+
+
+// {
+//   "plugins": [
+//     [
+//       "module-resolver",
+//       {
+//         "alias": {
+//           "@app": "./src/app",
+//           "@components": "./src/components",
+//           "@navigation": "./src/navigation",
+//           "@pages": "./src/pages",
+//           "@store": "./src/store",
+//           "@constants": "./src/constants",
+//           "@shared": "./src/shared",
+//           "@types": "./src/types",
+//           "@utils": "./src/utils"
+//         }
+//       }
+//     ]
+//   ]
+// }

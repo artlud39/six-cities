@@ -2,6 +2,7 @@ import CityCardList from '../../components/city-card-list/city-card-list';
 import Header from '../../components/header/header';
 import Navigation from '../../components/navigation/navigation';
 import { OffersType } from '../../types/offer';
+import Map from '../../components/map/map';
 
 type MainPageProps = {
   offers: OffersType,
@@ -76,7 +77,7 @@ function MainPage({ offers }: MainPageProps): JSX.Element {
               <CityCardList offers={offers} />
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map"></section>
+              <Map offers={offers} />
             </div>
           </div>
         </div>
