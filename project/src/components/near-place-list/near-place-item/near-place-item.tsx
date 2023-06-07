@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom';
-
-
-import { getAdaptiveRating } from '@utils/utils';
-import { OfferType } from '@types/offer';
-import { getOfferUrl } from '@utils/route';
-// import { OfferType } from '@types/offer';
+import { OfferType } from '../../../types/offer';
+import { getAdaptiveRating } from '../../../utils/utils';
+import { getOfferUrl } from '../../../utils/route';
 
 
 type NearPlaceItemProps = {
